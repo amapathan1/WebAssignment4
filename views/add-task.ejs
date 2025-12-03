@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/tasks">Tasks</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h2>Add New Task</h2>
+
+<form method="POST" action="/tasks/add">
+    <input type="text" name="title" placeholder="Task Title" required>
+    <textarea name="description" placeholder="Task Description" required></textarea>
+    <button type="submit">Add Task</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/tasks">Tasks</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h2>Welcome, <%= user.username %>!</h2>
+
+<p><strong>Total Tasks:</strong> <%= totalTasks %></p>
+<p><strong>Completed:</strong> <%= completedTasks %></p>
+
+<a href="/tasks" class="btn">View All Tasks</a>
+
+
+</body>
+</html>

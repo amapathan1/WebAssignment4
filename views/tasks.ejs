@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Tasks</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/tasks">Tasks</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h2>Your Tasks</h2>
+
+<a href="/tasks/add" class="btn">Add New Task</a>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+
+    <% tasks.forEach(task => { %>
+        <tr>
+            <td><%= task.title %></td>
+            <td><%= task.description %></td>
+            <td><%= task.complete ? "Completed" : "Pending" %></td>
+            <td>
+                <a href="/tasks/edit/<%= task.id %>" class="btn">Edit</a>
+
+                <!-- DELETE FIXED -->
+                <a href="/tasks/delete/<%= task.id %>" 
+                   class="btn"
+                   style="background:#d63031;">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    <% }) %>
+</table>
+
+</body>
+</html>

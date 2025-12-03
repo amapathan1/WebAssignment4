@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/tasks">Tasks</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h2>Edit Task</h2>
+
+<form method="POST" action="/tasks/edit/<%= task.id %>">
+    <input type="text" name="title" value="<%= task.title %>" required>
+    <textarea name="description" required><%= task.description %></textarea>
+
+    <label>
+        <input type="checkbox" name="complete" <%= task.complete ? "checked" : "" %>> Completed
+    </label>
+
+    <button type="submit">Save Changes</button>
+</form>
+
+
+</body>
+</html>
