@@ -59,8 +59,13 @@ app.get("/", (req, res) => {
     res.redirect("/login");
 });
 
-// ----------------- START SERVER -----------------
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
-});
+// Only listen locally (development)
+if (process.env.NODE_ENV !== "production") {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`🚀 Server running at http://localhost:${PORT}`);
+    });
+}
+
+// Export app for Vercel
+module.exports = app;
