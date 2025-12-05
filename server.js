@@ -1,3 +1,16 @@
+/********************************************************************************
+* WEB322 – Assignment 03
+*
+* I declare that this assignment is my own work in accordance with Seneca's
+* Academic Integrity Policy:
+*
+* https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+*
+* Name: _________AdnanKhan_____________ Student ID: ____131485245__________ Date: ____30-11-2025__________
+*
+********************************************************************************/
+
+
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
